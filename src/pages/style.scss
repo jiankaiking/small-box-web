@@ -1,0 +1,60 @@
+@import '../assets/css/_mixin';
+
+.card-title {
+  background: #fff;
+  padding: 20px 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+}
+
+.grey {
+  color: #999;
+}
+
+.page-view {
+  background: #fff;
+  padding: 20px 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 15px;
+
+  .h5-title {
+    margin: $pad 0;
+    font-family: monospace;
+    font-weight: bold;
+
+    i,
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    i {
+
+      background: $blue;
+      @include wh(2px, 16px);
+    }
+  }
+
+  .backSubmit {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .set_button {
+    margin-bottom: 20px;
+  }
+
+  .pagiNation {
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,286 @@
+@import './mixin';
+
+
+.el-date-editor .el-range-separator {
+  padding: 0;
+}
+
+.dialog .el-dialog {
+  width: 600px;
+  overflow: hidden;
+
+  .el-dialog__body {
+    max-height: 350px;
+    overflow-y: scroll;
+    margin-right: -20px;
+  }
+
+  .el-input {
+    width: 80%;
+  }
+
+  .select {
+    .el-input {
+      width: 100%;
+    }
+  }
+}
+
+.el-table thead {
+  color: #6a6a6a;
+}
+
+.el-table th>.cell {
+  font-weight: bold;
+}
+
+// 页头
+.el-page-header__left {
+  color: #8a8a8a;
+  margin: 0;
+}
+
+// .el-page-header__title {
+//   .img {
+//     margin-left: 25px;
+//   }
+// }
+
+.el-page-header__left::after {
+  background: transparent;
+}
+
+.dispear {
+  .el-page-header__left {
+    display: none
+  }
+}
+
+// 开关
+.el-switch__core {
+  @include wh(35px !important, 12px);
+}
+
+.el-switch__core:after {
+  top: -4px;
+  left: -1px;
+  @include wh(18px, 18px);
+  background: #2878f0;
+}
+
+.demo-image__error .image-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: #f5f7fa;
+  color: #909399;
+  font-size: 30px;
+}
+
+// dialog 预览
+.edit_dialog_preview .el-dialog {
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 325px;
+
+  .el-dialog__body {
+    padding: 0;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #999;
+  }
+}
+
+.edit_dialog_preview .el-dialog__header,
+.edit_dialog_preview .el-dialog__footer {
+  display: none;
+}
+
+// popover样式
+.pop-content {
+  p {
+    display: flex;
+    line-height: 30px;
+
+    >span {
+      &:first-child {
+        padding-right: 5px;
+        font-weight: bold;
+        min-width: 75px;
+      }
+    }
+  }
+}
+
+
+//登录页input 
+.icon_content {
+  .el-form-item__content {
+    padding-left: 0;
+  }
+
+  .content_indent {
+    .el-input__inner {
+      padding-left: 30px;
+    }
+  }
+}
+
+.register .icon_content {
+  .el-button--primary {
+    padding: 9px 10px;
+  }
+
+  .el-form-item__label {
+    text-align: left;
+  }
+
+  .content_indent {
+    .el-input__inner {
+      padding-left: 10px;
+    }
+  }
+}
+
+.el_editor {
+  margin-bottom: 100px;
+}
+
+.ql-container {
+  height: 100%;
+}
+
+//tree
+.el-tree-node__content {
+  height: 30px;
+}
+
+//上传组件
+.bannerForm .el-upload-list {
+  display: none;
+}
+
+// 富文本字体
+
+.ql-snow .ql-picker.ql-size,
+.ql-snow .ql-picker.ql-header {
+  width: 75px !important;
+}
+
+.ql-snow .ql-picker.ql-font {
+  width: 80px !important;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="10px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="10px"]::before {
+  content: '10px';
+  font-size: 10px;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="12px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="12px"]::before {
+  content: '12px';
+  font-size: 12px;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="14px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="14px"]::before {
+  content: '14px';
+  font-size: 14px;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="16px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="16px"]::before {
+  content: '16px';
+  font-size: 16px;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="18px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="18px"]::before {
+  content: '18px';
+  font-size: 18px;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="20px"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="20px"]::before {
+  content: '20px';
+  font-size: 20px;
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=SimSun]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=SimSun]::before {
+  content: "宋体";
+  font-family: "SimSun";
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=SimHei]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=SimHei]::before {
+  content: "黑体";
+  font-family: "SimHei";
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=Microsoft-YaHei]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=Microsoft-YaHei]::before {
+  content: "微软雅黑";
+  font-family: "Microsoft YaHei";
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=KaiTi]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=KaiTi]::before {
+  content: "楷体";
+  font-family: "KaiTi";
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=FangSong]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=FangSong]::before {
+  content: "仿宋";
+  font-family: "FangSong";
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value=Arial]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value=Arial]::before {
+  content: "Arial";
+  font-family: "Arial";
+}
+
+
+.ql-font-SimSun {
+  font-family: "SimSun";
+}
+
+.ql-font-SimHei {
+  font-family: "SimHei";
+}
+
+.ql-font-Microsoft-YaHei {
+  font-family: "Microsoft YaHei";
+}
+
+.ql-font-KaiTi {
+  font-family: "KaiTi";
+}
+
+.ql-font-FangSong {
+  font-family: "FangSong";
+}
+
+.ql-font-Arial {
+  font-family: "Arial";
+}

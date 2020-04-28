@@ -1,0 +1,532 @@
+@import '../../styles/_mixin';
+.over_view{
+    display: flex;
+    min-width: 1000px;
+    .left{
+        flex: 1;
+        min-width: 800px;
+        .card_title{
+            ul.net_user{
+                background: #fff;
+                padding:25px;
+                display: flex;
+                align-items: center;
+                li{
+                    flex: 1;
+                    text-align: center;
+                    position: relative;
+                    &::after{
+                        left: 100%;
+                        top: 20px;
+                        content: " ";
+                        height: 50px;
+                        width: 1px;
+                        position: absolute;
+                        background: #e6e6e6;
+                    }
+                    &:last-child{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                    img{
+                        display: block;
+                        margin:0 auto 20px;
+                        @include wh(45px,45px);
+                    }
+                    span{
+                        display: block;
+                        margin-top: 8px;
+                        &.text_bold{
+                            @include sc(18px,#1a1a1a);
+                            font-weight: bold;
+                        }
+                        &.text{
+                            @include sc(13px,#3a3a3a);
+                            i{
+                                @include sc(12px,#6a6a6a);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .card_content{
+            background: #fff;
+            margin:10px  0 0;
+            padding:10px;
+            .h_title{
+                @include sc(14px,$mainColor);
+                margin-bottom: 20px;
+            }
+            .group_content{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 2%;
+                .item{
+                    flex: 1;
+                    margin-right: 2%;
+                    margin-bottom: 2%;
+                    min-width: 48%;
+                    border:1px solid #ccc;
+                    height:120px;
+                    border-radius: 2px;
+                }
+            }
+            .guide_select{
+                width:150px;
+                margin:100px auto 20px;
+                position: relative;
+                display: flex;
+                .guide_item{
+                    flex: 1;
+                    border:1px solid #ccc;
+                    @include sc(13px,$mainColor);
+                    margin:0 10px;
+                    text-align: center;
+                    padding: 3px 0;
+                    cursor: pointer;
+                    &.active{
+                        background:rgba(40,120,240,1);
+                        color:#fff;
+                        border:0;
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        width:250px;
+        .user{
+            background: #fff;
+            margin-left: 10px;
+            padding:25px 25px 0;
+            text-align: center;
+            .user_img{
+                @include wh(50px,50px);
+                margin:0 auto;
+                display: block;
+            }
+            span{
+                display: block;
+                margin:10px  auto 0;
+                &.name{
+                    @include sc(14px,$mainColor);
+                }
+                &.user_tag{
+                    padding:3px 6px;
+                    border:1px solid #d4d8dd;
+                    @include sc(13px,#d4d8dd);
+                    width: 60px; 
+                }
+            }
+            .warn_tag{
+                background:linear-gradient(270deg,rgba(255,188,41,1) 0%,rgba(255,176,75,1) 100%);
+                display: flex;
+                align-items: center;
+                padding:0 10px 10px;
+                margin:10px -30px;
+                .tag_left{
+                    flex: 1;
+                    text-align: left;
+                    span{
+                        @include sc(15px,#fff);
+                        &.white{
+                            @include sc(13px,#fff);
+                        }
+                    }
+                }
+                .tag_right{
+                    cursor: pointer;
+                    span{
+                        @include sc(16px,#fff);
+                    }
+                }
+            }
+        }
+        .user_top{
+            padding-bottom: 50px;
+            &.bottom{
+                border-bottom: 1px solid #e6e6e6;
+            }
+            div{
+                margin-top:10px;
+                &.blue{
+                    color:$blue;
+                }
+                &.user_tag{
+                    padding:3px 6px;
+                    border:1px solid #d4d8dd;
+                    @include sc(13px,#d4d8dd);
+                    width: 150px;
+                    margin: 10px auto;
+                    &.blue{
+                        background: $blue;
+                        color:#fff;
+                        border: 0;
+                        cursor: pointer;
+                        width:100px;
+                        border-radius: 3px;
+                    }
+                }
+            }
+            .line_one{
+                img{
+                    width:15px;
+                    vertical-align: middle;
+                }
+                span{
+                    display: inline-block;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+//概况子页面
+.over_views{
+    .views_item{
+        &.pro_4{
+            padding-bottom: 15px;
+        }
+        &.bottom{
+            margin-top:15px;
+            padding-top:1px;
+        }
+        background: #fff;
+        padding:0 15px;
+        margin-bottom: 10px;
+        .h5_tit{
+            @include sc(15px,#000);
+            font-weight: bold;
+            margin:15px 0;
+            i{
+                width:3px;
+                height:15px;
+                background: $blue;
+                margin-right:5px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            span{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            em{
+                display: inline-block;
+                vertical-align: middle;
+                color:#3695F7;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+        .all_text{
+            span{
+                font-size: 14px;
+            }
+            .bold_grey{
+                color:#333;
+            }
+            .bold_blue{
+                color:#3695F7;
+                font-size: 24px;
+                margin:6px 0;
+            }
+            .limit_grey{
+                color:#999;
+                font-size: 13px;
+                i{
+                   color:#666;
+                   padding-left: 5px;
+                }
+            }
+        }
+        .chart{
+            border-radius:2px;
+            width:100%;
+            margin:25px auto;
+            height: 350px;
+        }   
+        .item{
+            display: flex;
+            padding-bottom: 20px;
+            .chart_all{
+                flex: 1;
+                border:1px solid rgba(221,221,221,1);
+                #chart,#charts{
+                    border-radius:2px;
+                    width:100%;
+                    margin:25px auto;
+                    height: 350px;
+                }
+                .chart_text{
+                    padding:10px 10px 20px;
+                    span{
+                        display: block;
+                    }
+                }
+            }
+            .nums{
+                flex: 1;
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-right: -2%;
+                    margin-left: 2%;
+                    margin-bottom: -2%;
+                    li{
+                        flex: 1;
+                        min-width:48%;
+                        margin-right:2%;
+                        margin-bottom: 2%;
+                        border-radius:2px;
+                        padding:10px 20px;
+                        border:1px solid rgba(221,221,221,1);
+                        height:255px;
+                        position: relative;
+                        section{
+                            span{
+                                display: block;
+                            }
+                            position: absolute;
+                            &.top{
+                                top:15px;
+                            }
+                            &.bottom{
+                                bottom: 15px;
+                            }
+                        }
+                    }
+                    &.async{
+                        li{
+                            min-width:50%; 
+                        }
+                    }
+                }
+            }
+            &.discharge{
+                margin-top:20px;
+                .nums{
+                    margin-right: 0;
+                    ul{
+                        margin-left: 0;
+                        flex-wrap: nowrap;
+                        li{
+                            margin-right:2%;
+                            min-width: 22%;
+                            height:100px;
+                        }
+                    }
+                }
+            }
+            &.business{
+                background:rgba(255,255,255,1);
+                box-shadow:0px 2px 15px 0px rgba(229,229,229,0.5);
+                border-radius:2px;
+                padding-bottom: 0;
+                .content{
+                    width: 100%;
+                    padding:20px 10px;
+                    display: flex;
+                    ul.left{
+                        flex: 1;
+                        min-width: 75%;
+                        position: relative;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            border-bottom: 1px solid #E6E6E6;
+                            padding:5px 200px 5px 5px;
+                            height:70px;
+                            section{
+                                flex: 1;
+                                span{
+                                    display: block;
+                                    &.limit_grey{
+                                        color:$mainColor;
+                                    }
+                                    &.bold_blue{
+                                        color:$mainColor;
+                                    }
+                                    .pointer{
+                                        color:#ccc;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                        .pic_item{
+                            position: absolute;
+                            @include wh(300px,100%);
+                            right:0;
+                            top:0;
+                            ul{
+                                border: 1px dashed transparent;
+                                &:hover{
+                                    border: 1px dashed #6a6a6a;
+                                }
+                                li{
+                                    @include wh(400px,65px);
+                                    line-height: 65px;
+                                    background: #162e48;
+                                    color: #FFF;
+                                    text-align: right;
+                                    border:0;
+                                    margin:2px 0;
+                                    float:right;
+                                    padding:0;
+                                    span{
+                                        display: block;
+                                        width:100%;
+                                        padding-right:50px;
+                                    }
+                                    position: relative;
+                                    .tool_icon{
+                                        position: absolute;
+                                        width:400px;
+                                        right:-400px;
+                                        top:45%;
+                                        display: flex;
+                                        .tool_bor{
+                                            border:1px dashed #2878F0;
+                                            @include wh(50px,60px);
+                                            border-left: 0;
+                                            border-bottom: 0;
+                                            .icon{
+                                                @include wh(20px,20px);
+                                                background:rgba(40,120,240,0.34);
+                                                border-radius: 100%;
+                                                padding:0;
+                                                position: relative;
+                                                bottom:-48px;
+                                                left: 5px;
+                                                &::after{
+                                                    content: '';
+                                                    width:25px;;
+                                                    height: 1px;
+                                                    position: absolute;
+                                                    right:-25px;
+                                                    bottom:8px;
+                                                    border-bottom: 1px dashed #2878F0;
+                                                }
+                                                i{
+                                                    @include wh(10px,10px);
+                                                    background:rgba(40,120,240,1);
+                                                    border-radius: 100%;
+                                                    display: block;
+                                                    @include center;
+                                                }
+                                            }
+                                        }
+                                        .tool_text{
+                                            span{
+                                                padding: 0;
+                                                height:20px;
+                                                text-align: left;
+                                                padding-left: 10px;
+                                                &.grey{
+                                                    color:#666666;
+                                                }
+                                                &.black{
+                                                    color:#333;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.sec_1{
+                                        width:300px;
+                                        background:linear-gradient(45deg, transparent 50px, #2878f2 0);
+                                    }
+                                    &.sec_2{
+                                        width:235px;
+                                        background:linear-gradient(45deg, transparent 50px, #5397ff 0);
+                                    }
+                                    &.sec_3{
+                                        width:170px;
+                                        background:linear-gradient(45deg, transparent 50px, #88b7ff 0);
+                                        .tool_icon{
+                                            top:-180%;
+                                            .tool_bor{
+                                                @include wh(170px,160px);
+                                                .icon{
+                                                    bottom:-148px;
+                                                    &::after{
+                                                        width:145px;;
+                                                        right:-145px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .tool_text{
+                                            line-height: 200px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .pic_visit{
+                        flex: 1;
+                    }
+                }
+                &.product{
+                    .content{
+                        padding:0 10px;
+                        ul{
+                            min-width:100%;
+                            li{
+                                &:last-child{
+                                    border-bottom: 0;
+                                }
+                                section.product_item{
+                                    display: flex;
+                                    align-content: center;
+                                    align-items: center;
+                                    img{
+                                        @include wh(40px,40px);
+                                        &.red{
+                                            border:2px solid #FF6EC2;
+                                            border-radius: 100%;
+                                        }
+                                    }
+                                    .data_ins{
+                                        flex: 1;
+                                        margin-left: 10px;
+                                        span{
+                                            &.grey{
+                                                color:#666;
+                                            }
+                                            &.black{
+                                                font-size: 17px;
+                                                margin-top:5px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .product_table{
+        h5{
+            margin:30px 0;
+            @include sc(14px,#666);
+        }
+    }
+    .charge_list{
+        h5{
+            @include sc(14px,$mainColor);
+            margin:15px 0;
+        }
+    }
+    .time_picker{
+        .text{
+            @include sc(13px,$mainColor);
+            font-weight: normal;
+            padding-right: 5px;
+        }
+    }
+}

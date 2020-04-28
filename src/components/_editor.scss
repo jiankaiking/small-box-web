@@ -1,0 +1,36 @@
+@import '../assets/css/mixin';
+
+.cfpa-quill-editor {
+  line-height: 24px;
+
+  .ql-snow {
+    background-color: #ffffff;
+  }
+}
+
+.cfpa-quill-wordCount {
+  background-color: #ffffff;
+  position: relative;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  line-height: 30px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  display: flex;
+
+  .cfpa-quill-warn-text {
+    flex: 1;
+    color: #aaa;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .cfpa-quill-wordCount-text {
+    text-align: right;
+    margin-right: 10px;
+    color: #aaa;
+  }
+}
